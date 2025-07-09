@@ -7,3 +7,10 @@
 ./server/.env.test  
 
 ./mobile/node_modules
+
+./mobile/.expo
+
+./server/node_modules
+
+./node_modules
+./mobile/node_modules
