@@ -7,6 +7,8 @@ import { Image } from "expo-image";
 import { styles } from "@/assets/styles/auth.styles.js";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "@/constants/colors";
+import PageLoader from "@/components/PageLoader";
+import { NativeWindStyleSheet } from "nativewind";
 
 export default function Page() {
   const { signIn, setActive, isLoaded } = useSignIn();
@@ -41,9 +43,7 @@ export default function Page() {
       // See https://clerk.com/docs/custom-flows/error-handling
       // for more info on error handling
       console.error(JSON.stringify(err, null, 2));
-      setError(
-        err.errors?.message || "An error occurred during sign-in"
-      );
+      setError(err.errors?.message || "An error occurred during sign-in");
     }
   };
 
@@ -56,11 +56,16 @@ export default function Page() {
       extraScrollHeight={50}
     >
       <View style={styles.container}>
-        <Image
-          source={require("../../assets/images/revenue-i3.png")}
-          style={styles.illustration}
-        />
+        <View className="flex justify-center items-center">
+          <Image
+            source={require("../../assets/images/revenue-i3.png")}
+            style={styles.illustration}
+          />
+        </View>
         <Text style={styles.verificationTitle}>Welcome Back</Text>
+        <Text className="text-sm flex justify-center text-center py-4">
+          Make sure you track you spend or income from here
+        </Text>
         {error ? (
           <View style={styles.errorBox}>
             <Ionicons name="alert-circle" size={20} color={COLORS.expense} />
@@ -86,7 +91,11 @@ export default function Page() {
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
-        <TouchableOpacity onPress={onSignInPress} style={styles.button}>
+        <TouchableOpacity
+          disabled={!isLoaded}
+          onPress={onSignInPress}
+          style={styles.button}
+        >
           <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
         <View style={styles.footerContainer}>

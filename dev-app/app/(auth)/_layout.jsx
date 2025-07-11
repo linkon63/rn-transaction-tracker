@@ -1,6 +1,7 @@
 import { Redirect, Stack } from "expo-router";
 import { useAuth } from "@clerk/clerk-expo";
 import PageLoader from "../../components/PageLoader";
+import '../../global.css';
 
 export default function AuthRoutesLayout() {
   const { isSignedIn, isLoaded } = useAuth();
