@@ -4,11 +4,15 @@
     "slug": "mm-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "owner": "linkon63",
+    "owner": "linkonexpo63",
     "icon": "./assets/images/icon.png",
     "scheme": "rncrud",
     "userInterfaceStyle": "automatic",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
@@ -27,7 +31,7 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -48,7 +52,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "b5c14ed3-6405-40f0-a72e-974a885d6f7e"
+        "projectId": "acbd3ce2-764e-40ff-ad15-3ceef687fd03"
       }
     },
     "runtimeVersion": {

@@ -7,7 +7,7 @@ import { Text } from "react-native";
 import {StatusBar} from "expo-status-bar";
 export default function RootLayout() {
   return (
-    <ClerkProvider tokenCache={tokenCache}>
+    <ClerkProvider publishableKey={"pk_test_cmVsYXRlZC1tYXJtb3QtMzMuY2xlcmsuYWNjb3VudHMuZGV2JA"} tokenCache={tokenCache}>
       <SafeScreen>
         <Slot />
       </SafeScreen>

@@ -8,12 +8,16 @@
       "developmentClient": true,
       "distribution": "internal"
     },
+
     "preview": {
       "distribution": "internal"
     },
     "production": {
       "android": {
         "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_cmVsYXRlZC1tYXJtb3QtMzMuY2xlcmsuYWNjb3VudHMuZGV2JA"
       },
       "autoIncrement": true
     }
