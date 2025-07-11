@@ -8,7 +8,6 @@ import { styles } from "@/assets/styles/auth.styles.js";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "@/constants/colors";
 import PageLoader from "@/components/PageLoader";
-import { NativeWindStyleSheet } from "nativewind";
 
 export default function Page() {
   const { signIn, setActive, isLoaded } = useSignIn();
