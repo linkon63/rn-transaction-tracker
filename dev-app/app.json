@@ -8,11 +8,8 @@
     "icon": "./assets/images/icon.png",
     "scheme": "rncrud",
     "userInterfaceStyle": "automatic",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "runtimeVersion": "1.0.0",
+    "platforms": ["ios", "android", "web"],
     "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
@@ -54,9 +51,6 @@
       "eas": {
         "projectId": "acbd3ce2-764e-40ff-ad15-3ceef687fd03"
       }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
     }
   }
 }
