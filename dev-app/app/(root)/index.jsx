@@ -51,6 +51,7 @@ export default function Page() {
   };
 
   useEffect(() => {
+    console.log("Loading transactions...");
     loadData();
   }, [loadData]);
 
